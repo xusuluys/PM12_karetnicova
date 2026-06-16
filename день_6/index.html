@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КиберКрабк - Онлайн обучение</title>
+    <!-- Подключаем CSS файл -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="container">
+        
+        <!-- Навигация -->
+        <nav>
+            <div class="logo">КиберКрабк</div>
+            <div class="nav-links">
+                <a onclick="showPage('home')">Главная</a>
+                <a onclick="showPage('course')">Курсы</a>
+                <a onclick="showPage('register')">Регистрация</a>
+            </div>
+        </nav>
+
+        <!-- СТРАНИЦА: HOME -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <p>Учебный центр дополнительного образования</p>
+                <h1>Основы безопасных онлайн-покупок и электронных платежей</h1>
+                <button class="btn-primary" onclick="showPage('course')">Начать обучение</button>
+            </div>
+
+            <div class="features">
+                <div class="card">
+                    <div class="card-image img-pattern"></div>
+                    <h3>Теория</h3>
+                    <p>Изучите базовые принципы работы с интернет-эквайрингом и платежными системами.</p>
+                </div>
+                <div class="card">
+                    <div class="card-image img-blue"></div>
+                    <h3>Практика</h3>
+                    <p>Симуляция оплаты и безопасного ввода данных на тренировочных платформах.</p>
+                </div>
+                <div class="card">
+                    <div class="card-image" style="background: #ccc;"></div>
+                    <h3>Тестирование</h3>
+                    <p>Проверьте знания после прохождения модулей и получите сертификат.</p>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer-col">
+                    <h4>КиберКрабк</h4>
+                    <ul>
+                        <li>Образовательная лицензия</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li>support@cybercrab.ru</li>
+                        <li>+7 (800) 555-35-35</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Политика</h4>
+                    <ul>
+                        <li>Оферта</li>
+                        <li>Конфиденциальность</li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <!-- СТРАНИЦА: КУРС -->
+        <div id="course" class="page">
+            <div class="course-section">
+                <!-- ВИДЕО ПЛЕЕР -->
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/_Z1O1yP6kqg?si=BCq-q64YI_Q_Bk-r" 
+                        title="Видео по кибербезопасности" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="course-content">
+                    <!-- Левая колонка: Текст -->
+                    <div class="content-block" style="background: transparent; padding:0;">
+                        <h2>Что будет на подкасте</h2>
+                        <p style="margin-bottom:20px; line-height:1.5;">Обсудим актуальные угрозы и методы защиты личных данных при совершении покупок в интернете.</p>
+                        <div style="display:flex; flex-direction: column; gap:10px;">
+                            <div class="list-item">
+                                <span class="list-icon">✔</span>
+                                <div><strong>Об актуальных угрозах</strong><br><span style="font-weight:400; font-size:0.8rem;">Кража данных и фишинг</span></div>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-icon">✔</span>
+                                <div><strong>Способы оплаты</strong><br><span style="font-weight:400; font-size:0.8rem;">Банковские карты, электронные кошельки</span></div>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-icon">✔</span>
+                                <div><strong>Безопасность в сети</strong><br><span style="font-weight:400; font-size:0.8rem;">Правила использования общественного Wi-Fi</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Правая колонка: Информация -->
+                    <div class="empty-block">
+                        <span>Дополнительная информация</span>
+                    </div>
+                </div>
+                
+                 <!-- Футер -->
+                <footer>
+                    <div class="footer-col">
+                        <h4>КиберКрабк</h4>
+                        <ul><li>Образовательная лицензия</li></ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Контакты</h4>
+                        <ul><li>support@cybercrab.ru</li></ul>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- СТРАНИЦА: РЕГИСТРАЦИЯ -->
+        <div id="register" class="page">
+            <div class="register-wrapper">
+                <h2>Регистрация на курс</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" placeholder="Иванов Иван">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" id="email" placeholder="user@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" placeholder="+7 (999) 123-45-67">
+                    </div>
+                    <button type="submit" class="btn-submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Панель для демонстрации переключения страниц (можно убрать после разработки) -->
+<div class="demo-controls">
+    <span>Переключить: </span>
+    <button class="active-btn" onclick="showPage('home')">Home</button>
+    <button onclick="showPage('course')">Курс</button>
+    <button onclick="showPage('register')">Регистрация</button>
+</div>
+
+<script>
+    function showPage(pageId) {
+        // Скрыть все страницы
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active'));
+
+        // Показать нужную
+        const target = document.getElementById(pageId);
+        if (target) {
+            target.classList.add('active');
+        }
+
+        // Обновить стиль кнопок панели демо
+        document.querySelectorAll('.demo-controls button').forEach(b => b.classList.remove('active-btn'));
+        // Подсветка кнопки панели
+        const btns = document.querySelectorAll('.demo-controls button');
+        btns.forEach(b => {
+            if(b.textContent.trim() === 'Home' && pageId === 'home') b.classList.add('active-btn');
+            if(b.textContent.trim() === 'Курс' && pageId === 'course') b.classList.add('active-btn');
+            if(b.textContent.trim() === 'Регистрация' && pageId === 'register') b.classList.add('active-btn');
+        });
+    }
+
+    // Правильное переключение активного класса кнопки демо-панели
+    document.querySelectorAll('.demo-controls button').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.demo-controls button').forEach(b => b.classList.remove('active-btn'));
+            this.classList.add('active-btn');
+        });
+    });
+</script>
+
+</body>
+</html>
